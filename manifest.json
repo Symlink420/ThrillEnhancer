@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Thrill Session PNL",
+  "version": "2.0",
+  "description": "Adds session PNL to the Thrill transactions page",
+  "content_scripts": [
+    {
+      "matches": ["*://thrill.com/*", "*://www.thrill.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "*://thrill.com/*",
+    "*://www.thrill.com/*"
+  ]
+}
